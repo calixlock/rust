@@ -1,5 +1,5 @@
 use std::mem::size_of;
-fn 005_char2() {
+pub fn _005_() {
   println!("size of a char {} bytes", size_of::<char>());
   println!("size of a String {} bytes", size_of::<String>());
   

@@ -1,6 +1,24 @@
 
-fn main() {
-    // _ 언더바 갯수는 여러개 상관없이 무시됨
+// 모듈 선언
+mod ex{
+    pub mod _fn_test;
+}
+mod _003_integer;
 
-    
+// 모듈 가져오기
+use ex::_fn_test::*;
+use _003_integer::*;
+
+    // 함수의 이름은 숫자로 시작하면 안됨
+fn main() {
+    _003_();
+    check();
+    check2();
+    // _007_println();
+
+
+}
+
+fn _007_println(){
+    println!("hi");
 }

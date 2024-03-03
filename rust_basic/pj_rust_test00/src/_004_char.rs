@@ -1,4 +1,5 @@
-fn 003_char(){
+// pub를 통해 함수 공개하여 사용할수있다
+pub fn _004_(){
       // mut : 가변 변수로 선언 / default는 immutable 상태 / 변수 타입 변경은 불가
       let mut x = 5;
       println!("The value of x is: {}", x);

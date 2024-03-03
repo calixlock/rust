@@ -1,6 +1,6 @@
 use std::mem::size_of_val;
 
-fn 006_float() {
+pub fn _006_() {
     // _ 언더바 갯수는 여러개 상관없이 무시됨
     let n1 : u8 = 9;
     let n2 = 9u8;

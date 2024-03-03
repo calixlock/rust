@@ -1,9 +1,8 @@
 
 /// document
-// module 사용
+// module 사용    
 use std::env; 
-
-fn 002_integer() {
+pub fn _003_() {
     println!("OS: {}", env::consts::OS);
     println!("ARCH: {}", env::consts::ARCH);
 
@@ -43,7 +42,7 @@ fn 002_integer() {
     다른 타입끼리 연산 안됨
     u8 + u16
     i8 + i8
-     */
+    */
     println!("n1 = {} / n3 = {}",n1,n3);
 
 }
