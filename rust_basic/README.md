@@ -10,7 +10,8 @@
 
 > 교재 :
 > https://dhghomon.github.io/easy_rust/Chapter_0.html
-> 3 / 188
+>
+> > 1 / 188 강좌
 
 #### 기타
 
