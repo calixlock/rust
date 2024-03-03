@@ -1,28 +1,32 @@
+use std::mem::size_of;
 fn main() {
-    // mut : 가변 변수로 선언 / default는 immutable 상태 / 변수 타입 변경은 불가
-    let mut x = 5;
-    println!("The value of x is: {}", x);
-    x = 6;
-    println!("The value of x is: {}", x);
+    
+    println!("size of a char {} bytes", size_of::<char>());
+    println!("size of a String {} bytes", size_of::<String>());
+    
+    // .len() > rust에서는 size of the string in bytes를 의미
+    // 글자수가 아닌 바이트 수
+    // u8 = 8 bits = 1 byte 
+    // 아스키코드 값에 해당 하면 1byte를 사용하지만 그 이외의 경우는 더 커질 수 있다.
+    println!("b.len() = {} bytes", "b".len()); // 1 byte
+    let name = "kimxxx";
+    println!("name.len() = {} bytes", name.len());
+    let number = "1234567";
+    println!("name.len() = {} bytes", number.len());
+    println!("Size of string containing 'ß': {}", "ß".len());
+    println!("Size of string containing '国': {}", "国".len());
+    println!("Size of string containing '𓅱': {}", "𓅱".len());
+    println!("--------------------------------------------------------");
 
-    //char;
-    let _first_letter = 'A';
-    let _space = ' '; // A space inside ' ' is also a char
-    let _other_language_char = 'Ꮔ'; // Thanks to Unicode, other languages like Cherokee display just fine too
-    let _cat_face = '😺'; // Emojis are chars too
-    // 1byte = 8 bits = 2^8 (0~255)
-    println!("Size of a char: {} bytes", std::mem::size_of::<char>());
+    let slice = "Hello!";
+    let slice2 = "안녕!"; // Korean for "hi"
+    // size length bytes
+    println!("Hello! is {} bytes.", slice.len());
+    println!("안녕! is {} bytes.", slice2.len());
+    
+    // chars count
+    println!("Hello! is {} bytes and also {} characters.", slice.len(), slice.chars().count());
+    println!("안녕! is {} bytes but only {} characters.", slice2.len(), slice2.chars().count());
 
-    // casting = simple type change using "as"
-    let n1 : u16 = 2;
-    let n2 : u8 = 4;
-    let n3 = n1 + n2 as u16; // casting 해서 연산이 이루어 지도록
-    println!("n3 is {}", n3);
-
-    // asciicode
-    let n4  = 'a' as u8;
-    println!("n4 is {}",n4);
-    let n5 = 'a' as u16;
-    println!("n5 is {}",n5);
+    
 }
- 
