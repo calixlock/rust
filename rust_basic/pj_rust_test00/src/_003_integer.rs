@@ -1,6 +1,6 @@
 
 /// document
-// module 사용    
+
 use std::env; 
 pub fn _003_() {
     println!("OS: {}", env::consts::OS);
