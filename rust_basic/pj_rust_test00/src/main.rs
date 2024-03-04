@@ -1,15 +1,12 @@
 fn main(){
-    _007_();
+    _008_();
   }
 
-  fn _007_(){
-    let name = "kim";
-    let age = give_age();
-    println!("hi, my name is {} and my age is {}", name, age);
-    println!("hi, my age is {age} and my age is {name}");
-  }
-
-  fn give_age() -> i32{
-    //return 생략 가능 값만 적어도 된다
-    return 42
-  }
+fn _008_() {
+    let city = "seoul";
+    let year = 2024;
+    let day = "0304";
+// string interpolation
+    println!("year is {1}, the city is {0}, the day is {2}", city, year+2, day);
+    
+}
