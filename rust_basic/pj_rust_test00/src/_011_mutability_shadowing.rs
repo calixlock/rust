@@ -12,6 +12,7 @@ pub fn _011_(){
   println!("var1 : {}", var1);
   let var1 = "test"; // shadowing 적용
   println!("var1 : {}", var1);
+  
   let var2 = 2;
   println!("var2_1 : {}", var2);
   {
